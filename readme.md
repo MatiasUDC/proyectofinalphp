@@ -1,5 +1,6 @@
 # Proyecto final PHP
 ##Tienda online
+##Integrantes del Proyecto: Bruzzo Matias, Curiqueo Cesar, Ccallizana Vilca Moises
 
 Venta de indumentaria y accesorios para caza y pesca.
 
