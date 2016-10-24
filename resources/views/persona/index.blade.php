@@ -1,7 +1,7 @@
 @extends('template.layout_master')
 @section('titulo', 'Listado de Personas')
-@section('content')
-
+@section('content') 
+        
         <div class = 'container'>
             <h1>Listado de Personas</h1>
             <div class="row">

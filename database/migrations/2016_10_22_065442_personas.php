@@ -21,12 +21,12 @@ class Personas extends Migration
         Schema::create('personas',function (Blueprint $table){
 
         $table->increments('id');
-        
-        $table->integer('dni');
-        
-        $table->String('apellido');
-        
+
         $table->String('nombre');
+
+        $table->String('apellido');
+
+        $table->integer('dni');
         
         $table->date('fecha_nac');
         

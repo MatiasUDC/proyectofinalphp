@@ -36,7 +36,7 @@ class PersonaController extends Controller
     public function create()
     {
         
-        return view('persona.create');
+        return view('persona.formulario.create');
     }
 
     /**
