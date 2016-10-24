@@ -139,7 +139,7 @@ class PersonaController extends Controller
     public function update($id,Request $request)
     {
         $persona = Persona::findOrfail($id);
-        
+    	
         $persona->dni = $request->dni;
         
         $persona->apellido = $request->apellido;
@@ -189,8 +189,8 @@ class PersonaController extends Controller
      */
     public function destroy($id)
     {
-        $persona = Persona::findOrfail($id);
-        $persona->delete();
+     	$persona = Persona::findOrfail($id);
+     	$persona->delete();
         return URL::to('persona');
     }
 }
