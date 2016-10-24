@@ -18,3 +18,12 @@ Route::get('/', function () {
 Route::resource('producto','ProductoController');
 
 Route::resource('categoria','CategoriaController');
+
+
+//persona Resources
+/********************* persona ***********************************************/
+Route::resource('persona','\App\Http\Controllers\PersonaController');
+Route::post('persona/{id}/update','\App\Http\Controllers\PersonaController@update');
+Route::get('persona/{id}/delete','\App\Http\Controllers\PersonaController@destroy');
+Route::get('persona/{id}/deleteMsg','\App\Http\Controllers\PersonaController@DeleteMsg');
+/********************* persona ***********************************************/
