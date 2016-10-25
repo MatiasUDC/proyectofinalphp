@@ -20,6 +20,10 @@ Route::resource('producto','ProductoController');
 Route::resource('categoria','CategoriaController');
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
 //persona Resources
 /********************* persona ***********************************************/
 Route::resource('persona','\App\Http\Controllers\PersonaController');
@@ -27,3 +31,4 @@ Route::post('persona/{id}/update','\App\Http\Controllers\PersonaController@updat
 Route::get('persona/{id}/delete','\App\Http\Controllers\PersonaController@destroy');
 Route::get('persona/{id}/deleteMsg','\App\Http\Controllers\PersonaController@DeleteMsg');
 /********************* persona ***********************************************/
+

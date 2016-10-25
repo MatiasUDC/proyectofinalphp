@@ -6,7 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 /**
  * Class Personas.
  *
- * @author  The scaffold-interface created at 2016-10-22 06:54:42pm
+ * @author  The scaffold-interface created at 2016-10-25 07:42:02pm
  * @link  https://github.com/amranidev/scaffold-interface
  */
 class Personas extends Migration
@@ -21,12 +21,12 @@ class Personas extends Migration
         Schema::create('personas',function (Blueprint $table){
 
         $table->increments('id');
-
+        
+        $table->String('dni');
+        
         $table->String('nombre');
-
+        
         $table->String('apellido');
-
-        $table->integer('dni');
         
         $table->date('fecha_nac');
         
@@ -44,6 +44,8 @@ class Personas extends Migration
          * Foreignkeys section
          */
         
+        
+        $table->timestamps();
         
         
         $table->softDeletes();

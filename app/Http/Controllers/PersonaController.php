@@ -12,7 +12,7 @@ use URL;
 /**
  * Class PersonaController.
  *
- * @author  The scaffold-interface created at 2016-10-22 06:54:42pm
+ * @author  The scaffold-interface created at 2016-10-25 07:42:03pm
  * @link  https://github.com/amranidev/scaffold-interface
  */
 class PersonaController extends Controller
@@ -36,7 +36,7 @@ class PersonaController extends Controller
     public function create()
     {
         
-        return view('persona.formulario.create');
+        return view('persona/formulario.create');
     }
 
     /**
@@ -53,10 +53,10 @@ class PersonaController extends Controller
         $persona->dni = $request->dni;
 
         
-        $persona->apellido = $request->apellido;
+        $persona->nombre = $request->nombre;
 
         
-        $persona->nombre = $request->nombre;
+        $persona->apellido = $request->apellido;
 
         
         $persona->fecha_nac = $request->fecha_nac;
@@ -108,7 +108,7 @@ class PersonaController extends Controller
         }
 
         $persona = Persona::findOrfail($id);
-        return view('persona.show',compact('persona'));
+        return view('persona/formulario.show',compact('persona'));
     }
 
     /**
@@ -126,7 +126,7 @@ class PersonaController extends Controller
 
         
         $persona = Persona::findOrfail($id);
-        return view('persona.edit',compact('persona'  ));
+        return view('persona/formulario.edit',compact('persona'  ));
     }
 
     /**
@@ -142,9 +142,9 @@ class PersonaController extends Controller
     	
         $persona->dni = $request->dni;
         
-        $persona->apellido = $request->apellido;
-        
         $persona->nombre = $request->nombre;
+        
+        $persona->apellido = $request->apellido;
         
         $persona->fecha_nac = $request->fecha_nac;
         
@@ -173,7 +173,7 @@ class PersonaController extends Controller
      */
     public function DeleteMsg($id,Request $request)
     {
-        $msg = Ajaxis::MtDeleting('Atencion!!','Seguro que deseas Eliminar?','/persona/'. $id . '/delete/');
+        $msg = Ajaxis::BtDeleting('Atencion!!','Estas seguro que deseas Eliminar?','/persona/'. $id . '/delete/');
 
         if($request->ajax())
         {
