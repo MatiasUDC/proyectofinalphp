@@ -4,7 +4,12 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "202451a9e95cbbd66a817628336d83cd",
+=======
+    "hash": "b3395b6eadf77e3826884a5644c16b82",
+    "content-hash": "9f63342b6de07443dacf34297708abe2",
+>>>>>>> 2918a4e8fa5ea742110dd492af4916ceeb640a32
     "packages": [
         {
             "name": "amranidev/ajaxis",
@@ -564,7 +569,11 @@
                 "framework",
                 "laravel"
             ],
+<<<<<<< HEAD
             "time": "2016-10-25T13:38:24+00:00"
+=======
+            "time": "2016-10-25 13:38:24"
+>>>>>>> 2918a4e8fa5ea742110dd492af4916ceeb640a32
         },
         {
             "name": "laravelcollective/html",
@@ -2894,7 +2903,11 @@
                 "testing",
                 "xunit"
             ],
+<<<<<<< HEAD
             "time": "2016-10-25T07:40:25+00:00"
+=======
+            "time": "2016-10-25 07:40:25"
+>>>>>>> 2918a4e8fa5ea742110dd492af4916ceeb640a32
         },
         {
             "name": "phpunit/phpunit-mock-objects",

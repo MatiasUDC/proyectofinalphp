@@ -177,6 +177,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        //******login app --- ******
+       // Amranidev\ScaffoldInterface\ScaffoldInterfaceServiceProvider::class,
+        //****************************************
+        Amranidev\Ajaxis\AjaxisServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
+        Vinkla\Pusher\PusherServiceProvider::class,
+
 
     ],
 

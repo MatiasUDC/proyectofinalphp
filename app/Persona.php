@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Persona.
  *
- * @author  The scaffold-interface created at 2016-10-22 06:54:42pm
+ * @author  The scaffold-interface created at 2016-10-25 07:42:03pm
  * @link  https://github.com/amranidev/scaffold-interface
  */
 class Persona extends Model
@@ -19,8 +19,6 @@ class Persona extends Model
 	protected $dates = ['deleted_at'];
     
 	
-    public $timestamps = false;
-    
     protected $table = 'personas';
 
 	

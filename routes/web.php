@@ -18,6 +18,10 @@ Route::get('/', function () {
 
 
 
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
+
 //persona Resources
 /********************* persona ***********************************************/
 Route::resource('persona','\App\Http\Controllers\PersonaController');
@@ -26,6 +30,7 @@ Route::get('persona/{id}/delete','\App\Http\Controllers\PersonaController@destro
 Route::get('persona/{id}/deleteMsg','\App\Http\Controllers\PersonaController@DeleteMsg');
 /********************* persona ***********************************************/
 
+<<<<<<< HEAD
 Route::group(['prefix' => 'admin'], function()
 {
 
@@ -34,3 +39,5 @@ Route::group(['prefix' => 'admin'], function()
 	Route::resource('categoria','CategoriaController');
 
 });
+=======
+>>>>>>> 2918a4e8fa5ea742110dd492af4916ceeb640a32
