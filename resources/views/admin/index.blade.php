@@ -1,8 +1,8 @@
-@extends('template.layout')
+@extends('admin.template.layout')
 @section('title',"Administracion")
 @section('content')
-    @include('template.partials.nav')
+    @include('admin.template.partials.nav')
     <div>
-        Bienvenido!!!! xD
+        Bienvenido administrador!!!! xD
     </div>
 @endsection

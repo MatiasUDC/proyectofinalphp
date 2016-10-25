@@ -15,10 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('producto','ProductoController');
 
-Route::resource('categoria','CategoriaController');
-Route::resource('admin','AdministradorController');
+
 
 //persona Resources
 /********************* persona ***********************************************/
@@ -27,3 +25,12 @@ Route::post('persona/{id}/update','\App\Http\Controllers\PersonaController@updat
 Route::get('persona/{id}/delete','\App\Http\Controllers\PersonaController@destroy');
 Route::get('persona/{id}/deleteMsg','\App\Http\Controllers\PersonaController@DeleteMsg');
 /********************* persona ***********************************************/
+
+Route::group(['prefix' => 'admin'], function()
+{
+
+    Route::get('/', 'AdministradorController@index');
+    Route::resource('producto','ProductoController');
+	Route::resource('categoria','CategoriaController');
+
+});
