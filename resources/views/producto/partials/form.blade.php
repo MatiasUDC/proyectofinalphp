@@ -18,19 +18,9 @@
 </div>
 
 <div class="form-group">
+    {!! Form::label('categoria_id','Categoria (*) ',['class'=> "form-label-cms-3" ]) !!}
 
-    <span class="glyphicon glyphicon-barcode" aria-hidden="true"></span> 
-    {!! Form::label('codigo_barra',' Codigo de Barras (*) ',['class'=> "form-label-cms-3"]) !!}
-
-
-    {!! Form::number('codigo_barra',(isset($producto)? $producto->codigo_barra: null),['class'=>'form-control',(isset($ver)? 'disabled': null ),'id' => 'codigo_barra', 'required'=>'required', 'min'=>'1000000000000', 'max'=>'9999999999999']) !!}
-
-</div>
-
-<div class="form-group">
-    {!! Form::label('presentacion_producto_id','Presentacion del producto (*) ',['class'=> "form-label-cms-3" ]) !!}
-
-    {!! Form::select('presentacion_producto_id',['' => 'Seleccione una presentacion'] + $presentaciones->toArray(),(isset($producto)? $producto->presentacion_producto_id: null),['id' => 'presentacion_producto_id','class'=>'form-control',(isset($ver)? 'disabled': null )]) !!}
+    {!! Form::select('categoria_id',['' => 'Seleccione una categoria'] + $presentaciones->toArray(),(isset($producto)? $producto->categoria_id: null),['id' => 'categoria_id','class'=>'form-control',(isset($ver)? 'disabled': null )]) !!}
 
 </div>
 
@@ -47,7 +37,7 @@
    
    @else
     <div class="form-group">
-        <img class="img-responsive" alt="Responsive image" src="/imagenes/productos/{{ $producto->imagen}}"> 
+        <img class="img-responsive" alt="Responsive image" src="/imagenes/productos/{{ $producto->imagen }}"> 
     </div>
    <a href="{{route('producto.edit',$producto->id)}}" class="btn btn-warning "><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Editar</a>
 @endif
