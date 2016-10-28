@@ -16,11 +16,13 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-
+/*
 Route::group(['prefix' => 'admin'], function()
 {
     Route::resource('producto','ProductoController');
 	Route::resource('categoria','CategoriaController');
 
 });
+
+*/
 
