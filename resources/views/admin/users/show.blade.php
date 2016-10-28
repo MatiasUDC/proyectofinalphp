@@ -5,14 +5,14 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">
-                    <div class="panel-heading">User</div>
+                    <div class="panel-heading">Usuario</div>
                     <div class="panel-body">
 
                         <div class="table-responsive">
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID.</th> <th>Name</th><th>Email</th>
+                                        <th>ID.</th> <th>Nombre</th><th>Email</th>
                                     </tr>
                                 </thead>
                                 <tbody>
