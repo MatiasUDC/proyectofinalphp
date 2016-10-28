@@ -11,17 +11,41 @@
 |
 */
 
+Route::get('/', function () {
+    return view('welcome');
+});
 
+
+Route::get('admin', 'Admin\\AdminController@index');
+
+Route::get('admin/give-role-permissions', 'Admin\\AdminController@getGiveRolePermissions');
+Route::post('admin/give-role-permissions', 'Admin\\AdminController@postGiveRolePermissions');
+Route::resource('admin/roles', 'Admin\\RolesController');
+Route::resource('admin/permissions', 'Admin\\PermissionsController');
+Route::resource('admin/users', 'Admin\\UsersController');
 Auth::routes();
 
-Route::get('/', 'HomeController@index');
+
+Route::get('/home', 'HomeController@index');
+
+
 
 /*
-Route::group(['prefix' => 'admin'], function()
-{
-    Route::resource('producto','ProductoController');
-	Route::resource('categoria','CategoriaController');
+// Check role in route middleware
+Route::group(['prefix' => 'admin', 'middleware' => 
+	['auth', 'roles'], 'roles' => 'admin'], function () {
+   Route::get('/', ['uses' => 'AdminController@index']);
 
+   
+});
+*/
+
+
+
+/*
+// Check role in route middleware
+Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'roles' => 'admin'], function () {
+	Route::get('/', ['uses' => 'Admin\UsersController@index']);
 });
 
 */

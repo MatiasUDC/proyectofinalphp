@@ -8,7 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-esta conectado usuario                </div>
+                    esta conectado admin.
+                </div>
             </div>
         </div>
     </div>

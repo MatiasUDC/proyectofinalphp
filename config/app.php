@@ -177,13 +177,13 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        //******login app --- ******
-       // Amranidev\ScaffoldInterface\ScaffoldInterfaceServiceProvider::class,
-        //****************************************
-        Amranidev\Ajaxis\AjaxisServiceProvider::class,
-        Spatie\Permission\PermissionServiceProvider::class,
-        Vinkla\Pusher\PusherServiceProvider::class,
 
+
+
+         Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
+    // For crud generator & html
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
     ],
 
@@ -234,6 +234,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+
           
     ],
 

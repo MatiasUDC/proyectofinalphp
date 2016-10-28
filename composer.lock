@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b3395b6eadf77e3826884a5644c16b82",
-    "content-hash": "9f63342b6de07443dacf34297708abe2",
+    "hash": "5b787b23077f35bd37d914422a50f0f1",
+    "content-hash": "b9d6aec7d39b13f698e55a2bb32110a0",
     "packages": [
         {
             "name": "amranidev/ajaxis",
@@ -140,6 +140,96 @@
                 "smart generator"
             ],
             "time": "2016-10-26 14:44:46"
+        },
+        {
+            "name": "appzcoder/crud-generator",
+            "version": "v1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/appzcoder/crud-generator.git",
+                "reference": "9dbb84c96a9642b17532c5fd263bdee2433c0adf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/appzcoder/crud-generator/zipball/9dbb84c96a9642b17532c5fd263bdee2433c0adf",
+                "reference": "9dbb84c96a9642b17532c5fd263bdee2433c0adf",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.1",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Appzcoder\\CrudGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sohel Amin",
+                    "email": "sohelamincse@gmail.com",
+                    "homepage": "http://www.appzcoder.com"
+                }
+            ],
+            "description": "Laravel 5 CRUD Generator",
+            "keywords": [
+                "crud",
+                "crud generator",
+                "laravel",
+                "laravel crud generator"
+            ],
+            "time": "2016-09-27 15:20:36"
+        },
+        {
+            "name": "appzcoder/laravel-admin",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/appzcoder/laravel-admin.git",
+                "reference": "f8d55d8b8db25dfc0d10092e2193fc95e209e92c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/appzcoder/laravel-admin/zipball/f8d55d8b8db25dfc0d10092e2193fc95e209e92c",
+                "reference": "f8d55d8b8db25dfc0d10092e2193fc95e209e92c",
+                "shasum": ""
+            },
+            "require": {
+                "appzcoder/crud-generator": "^1.0",
+                "illuminate/support": "^5.1",
+                "laravelcollective/html": "~5.1",
+                "php": ">=5.5.9"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Appzcoder\\LaravelAdmin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sohel Amin",
+                    "email": "sohelamincse@gmail.com",
+                    "homepage": "http://www.appzcoder.com"
+                }
+            ],
+            "description": "Laravel Admin Panel",
+            "keywords": [
+                "admin",
+                "laravel",
+                "laravel admin",
+                "laravel admin panel"
+            ],
+            "time": "2016-09-30 05:29:55"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -3846,7 +3936,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "appzcoder/laravel-admin": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
