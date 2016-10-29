@@ -22,104 +22,48 @@
         </script>
     </head>
     <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <div class="navbar-header">
 
+                    <!-- Collapsed Hamburger -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-
-
-
-
-
-
-
-
-
-
-
-
- <nav class="navbar navbar-inverse" >
-  <div class="container">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ url('/') }}">
+                    <!-- Branding Image -->
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <!--{{ config('app.name', 'Tenda Online') }}-->
                         {{ config('', 'Tenda Online') }}
 
                     </a>
-    </div>
+                </div>
 
-
- <!-- Branding Image -->
-                    
-    <!--
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-    </ul>
--->
-
- <div class="col-sm-3 col-md-8">
-        <form class="navbar-form" role="search">
-        <div class="input-group">
-
-            <input type="text" class="form-control" placeholder="Buscar" name="q">
-            <div class="input-group-btn">
-                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
-            </div>
-        </div>
-        </form>
-    </div>
-
-
-
-
-
+                <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left Side Of Navbar -->
+                    <ul class="nav navbar-nav">
+                        <li><a href="{{ url('/admin') }}">Panel <span class="sr-only">(current)</span></a></li>
+                        <li><a href="{{ url('/admin/users') }}">Usuarios</a></li>
+                        <li><a href="{{ url('/admin/roles') }}">Roles</a></li>
+                        <li class="dropdown">
+                            <a href="{{ url('/admin/permissions') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Permisos <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{ url('/admin/permissions') }}">Todos los Permisos</a></li>
+                                <li><a href="{{ url('/admin/give-role-permissions') }}">Dar Permiso de Funciones</a></li>
+                            </ul>
+                        </li>
+                       <!-- <li><a href="{{ url('/admin/generator') }}">Generator</a></li> -->
+                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
-
-
-                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-th-large"></span><!-- aca va titulo--><span class="caret"></span></a>
-
-                            <ul class="dropdown-menu">
-
-                            <li><a href="{{ url('producto') }}"><span class="glyphicon glyphicon-th-list"></span> Productos</a></li>
-                            
-
-
-
-                            </ul>
-                        </li>
-
-
-
-
-                       
-
-
-                           <li class="dropdown">
-                            <a href="{{ url('/admin/permissions') }}" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-cog"></span><!-- aca va titulo--><span class="caret"></span></a>
-
-                            <ul class="dropdown-menu">
-
-                            <li><a href="{{ url('/admin/users') }}"><span class="glyphicon glyphicon-user"></span> Usuarios</a></li>
-                             <li><a href="{{ url('/admin/roles') }}"><span class="glyphicon glyphicon-ok" ></span> Roles</a></li>
-                        
-
-
-                                <li><a href="{{ url('/admin/permissions') }}">
-                                <span class=" glyphicon glyphicon-bookmark"></span> Todos los Permisos</a></li>
-                                <li><a href="{{ url('/admin/give-role-permissions') }}"><span class="glyphicon glyphicon-plus"></span> Dar Permiso de Funciones</a></li>
-                            </ul>
-                        </li>
-
-                        
-
-
                         <!-- Authentication Links -->
                         @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
-                            <li><a href="{{ url('/register') }}"><span class="glyphicon glyphicon-user"></span>Registr</a></li>
+                            <li><a href="{{ url('/login') }}">Login</a></li>
+                            <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -131,7 +75,7 @@
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Salir
+                                            Logout
                                         </a>
 
                                         <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
@@ -142,18 +86,9 @@
                             </li>
                         @endif
                     </ul>
-
-
-
-
-
-   
-  </div>
-</nav>
-
-
-
-
+                </div>
+            </div>
+        </nav>
 
         @if (Session::has('flash_message'))
             <div class="alert alert-success">
