@@ -43,6 +43,25 @@ class ProductoController extends Controller
     public function store(Requests\ProductoRequest $request)
     {
        
+
+        //se agrega para subida de la foto
+
+         $producto=Producto::create( $request->all());
+
+        if(  $request->file('imagen')   ){   
+
+            $file = $request->file('imagen');
+
+            $nombre = 'Producto_'.time().'.'.$file->getClientOriginalExtension();
+            $path = public_path().'/imagenes/productos/';
+            $file->move($path, $nombre);
+            $producto->imagen = $nombre;
+            $producto->save();
+        }
+
+        
+
+
         $requestData = $request->all(); 
         Producto::create($requestData);
         Session::flash('flash_message', 'Producto fue Cargado Exitosamente!');

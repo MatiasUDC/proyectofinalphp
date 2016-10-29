@@ -178,7 +178,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
-
+        //componente para login
 
         // Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
     // For crud generator & html
