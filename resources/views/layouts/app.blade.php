@@ -102,6 +102,8 @@
 
                             <ul class="dropdown-menu">
 
+                            <li><a href="{{ url('/admin') }}">Panel de Admin <span class="sr-only">(current)</span></a></li>
+
                             <li><a href="{{ url('/admin/users') }}"><span class="glyphicon glyphicon-user"></span> Usuarios</a></li>
                              <li><a href="{{ url('/admin/roles') }}"><span class="glyphicon glyphicon-ok" ></span> Roles</a></li>
                         
