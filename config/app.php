@@ -180,9 +180,9 @@ return [
 
 
 
-         Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
+        // Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
     // For crud generator & html
-        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        //Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
     ],
@@ -235,7 +235,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 
-          
+
     ],
 
 ];
