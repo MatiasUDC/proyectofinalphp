@@ -51,3 +51,4 @@ Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'rol
 
 */
 
+Route::resource('producto', 'Producto\\ProductoController');

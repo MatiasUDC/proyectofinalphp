@@ -1,0 +1,115 @@
+<?php
+
+namespace App\Http\Controllers\Producto;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use App\Producto;
+use Illuminate\Http\Request;
+use Session;
+
+class ProductoController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index()
+    {
+        $producto = Producto::paginate(25);
+
+        return view('Producto.producto.index', compact('producto'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function create()
+    {
+        return view('Producto.producto.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function store(Requests\ProductoRequest $request)
+    {
+       
+        $requestData = $request->all(); 
+        Producto::create($requestData);
+        Session::flash('flash_message', 'Producto fue Cargado Exitosamente!');
+        return redirect('producto');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\View\View
+     */
+    public function show($id)
+    {
+        $producto = Producto::findOrFail($id);
+
+        return view('Producto.producto.show', compact('producto'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\View\View
+     */
+    public function edit($id)
+    {
+        $producto = Producto::findOrFail($id);
+
+        return view('Producto.producto.edit', compact('producto'));
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update($id, Requests\ProductoRequest $request)
+    {
+       
+        $requestData = $request->all();
+        $producto = Producto::findOrFail($id);
+        $producto->update($requestData);
+
+        Session::flash('flash_message', 'Producto fue Actualizado Exitosamente!');
+
+        return redirect('producto');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function destroy($id)
+    {
+        Producto::destroy($id);
+
+        Session::flash('flash_message', 'Producto Fue Eliminado!');
+
+        return redirect('producto');
+    }
+}
