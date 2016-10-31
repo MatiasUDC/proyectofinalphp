@@ -8,11 +8,11 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Tienda Online') }}</title>
+        <title>{{ config('Tienda Online', 'Tienda Online') }}</title>
 
         <!-- Styles -->
         <link href="/css/app.css" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Scripts -->
         <script>
