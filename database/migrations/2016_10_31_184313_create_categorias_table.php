@@ -1,8 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
 class CreateCategoriasTable extends Migration
 {
@@ -13,9 +12,10 @@ class CreateCategoriasTable extends Migration
      */
     public function up()
     {
-        Schema::create('categorias', function (Blueprint $table) {
+        Schema::create('categorias', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre',30);
+            $table->string('nombre');
+            $table->longText('descripcion');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ class CreateCategoriasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categorias');
+        Schema::drop('categorias');
     }
 }

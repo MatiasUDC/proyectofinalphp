@@ -51,3 +51,5 @@ Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'rol
 
 */
 
+
+Route::resource('categoria', 'Categoria\\CategoriaController');
