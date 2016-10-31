@@ -181,7 +181,7 @@ return [
         //componente para login
 
         // Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
-    // For crud generator & html
+        // For creacion de formularios & html
         //Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 

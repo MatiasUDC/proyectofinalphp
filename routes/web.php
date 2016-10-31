@@ -29,7 +29,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-
+Route::resource('producto', 'Producto\\ProductoController');
 
 /*
 // Check role in route middleware
@@ -51,4 +51,3 @@ Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'rol
 
 */
 
-Route::resource('producto', 'Producto\\ProductoController');
