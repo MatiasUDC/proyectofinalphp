@@ -84,6 +84,8 @@
                             <ul class="dropdown-menu">
 
                             <li><a href="{{ url('producto') }}"><span class="glyphicon glyphicon-th-list"></span> Productos</a></li>
+
+                            <li><a href="{{ url('categoria') }}"><span class="glyphicon glyphicon-th-list"></span> Categorias</a></li>
                             
 
 
