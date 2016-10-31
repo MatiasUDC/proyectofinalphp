@@ -52,9 +52,9 @@ class ProductoController extends Controller
 
             $file = $request->file('imagen');
 
-            $nombre = 'Producto_'.time().'.'.$file->getClientOriginalExtension();
+            $nombre = 'producto_'.time().'.'.$file->getClientOriginalExtension();
             $path = public_path().'/imagenes/productos/';
-            $file->move($path, $nombre);
+           // $file->move($path, $nombre);
             $producto->imagen = $nombre;
             $producto->save();
         }
@@ -63,7 +63,7 @@ class ProductoController extends Controller
 
 
         $requestData = $request->all(); 
-        Producto::create($requestData);
+       // Producto::create($requestData);
         Session::flash('flash_message', 'Producto fue Cargado Exitosamente!');
         return redirect('producto');
     }
