@@ -6,6 +6,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Producto;
+use App\Categorium;
 use Illuminate\Http\Request;
 use Session;
 
@@ -30,7 +31,8 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        return view('Producto.producto.create');
+        $categoria = Categorium::all('id','nombre');
+    return view('Producto.producto.create', compact('categoria'));
     }
 
     /**

@@ -25,7 +25,11 @@ class Producto extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombre', 'descripcion', 'imagen', 'stock', 'precio'];
+    protected $fillable = ['nombre', 'descripcion','categoria_id', 'imagen', 'stock', 'precio'];
 
+ public function rubro()
+    {
+        return $this->belongsTo('App\Categorium');
+    } 
     
 }
