@@ -26,7 +26,7 @@ class ProductoRequest extends FormRequest
         return [
             'nombre' => 'required|min:3',
             'descripcion' => 'required|min:3',
-           // 'categoria_id' =>  'required',
+            'categoria_id' =>  'required',
             'imagen' => 'required',
             'stock' => 'required',
             'precio' => 'required'
