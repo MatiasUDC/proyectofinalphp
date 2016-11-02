@@ -14,7 +14,7 @@ class ProductoController extends Controller
 {
       public function __construct()
     {
-      //  $this->middleware('auth');
+      //  $this->middleware('auth'); // para pedir el ingreso del usuario
     }
     /**
      * Display a listing of the resource.
@@ -60,7 +60,7 @@ class ProductoController extends Controller
 
             $nombre = 'producto_'.time().'.'.$file->getClientOriginalExtension();
             $path = public_path().'/imagenes/productos/';
-           // $file->move($path, $nombre);
+            $file->move($path, $nombre);
             $producto->imagen = $nombre;
             $producto->save();
         }
@@ -97,9 +97,13 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
+
+
+         $categoria = Categorium::all('id','nombre');
+
         $producto = Producto::findOrFail($id);
 
-        return view('Producto.producto.edit', compact('producto'));
+        return view('Producto.producto.edit', compact('producto','categoria'));
     }
 
     /**

@@ -37,6 +37,61 @@
                     {!! $errors->first('descripcion', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
+
+
+
+
+
+     
+    <div class="form-group {{ $errors->has('categoria_id') ? 'has-error' : ''}}">
+
+    {!! Form::label('categoria', 'Categoria:', ['class' => 'col-md-4 control-label']) !!}
+
+
+
+          <div class="col-md-6">
+
+         <select class="form-control" name="categoria_id" >
+
+
+                        <option value=""> Seleccione Categoria: </option>
+
+
+            @foreach($categoria as $categorias)
+              <option value="{{$categorias->id}}">{{$categorias->nombre}}   </option>
+             @endforeach
+             </select>
+        @if ($errors->has('categoria_id')? 'has-error':'')
+
+              {!! $errors->first('id','categoria_id', '<p class="help-block">:message</p>') !!}
+          @endif
+            
+
+
+         </div>
+    </div>
+
+
+
+       <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
+                {!! Form::label('imagen', 'Imagen', ['class' => 'col-md-4 control-label']) !!}
+                <div class="col-md-6">
+                    {!! Form::file('imagen', null, ['class' => 'form-control']) !!}
+                    {!! $errors->first('imagen', '<p class="help-block">:message</p>') !!}
+                </div>
+            </div>
+
+
+
+      
+
+
+
+
+
+
+            <!--
+
             <div class="form-group {{ $errors->has('imagen') ? 'has-error' : ''}}">
                 {!! Form::label('imagen', 'Imagen', ['class' => 'col-md-4 control-label']) !!}
                 <div class="col-md-6">
@@ -44,6 +99,12 @@
                     {!! $errors->first('imagen', '<p class="help-block">:message</p>') !!}
                 </div>
             </div>
+
+-->
+
+
+
+
             <div class="form-group {{ $errors->has('stock') ? 'has-error' : ''}}">
                 {!! Form::label('stock', 'Stock', ['class' => 'col-md-4 control-label']) !!}
                 <div class="col-md-6">
@@ -60,11 +121,24 @@
             </div>
 
 
-                        <div class="form-group">
-                            <div class="col-md-offset-4 col-md-4">
-                                {!! Form::submit('Actualizar Registro', ['class' => 'btn btn-primary']) !!}
-                            </div>
+                        
+            <div class="form-group">
+                 <div class="row">
+                        <div class="col-md-offset-4 col-md-1">
+                            
+                            {!! Form::submit('Actualizar Registro', ['class' => 'btn btn-primary']) !!}
+
+
                         </div>
+                        <div class="col-md-offset-2 col-md-1">
+                            <a href="/producto">
+
+                            <button type="button" class="btn btn-warning">Cancelar</button>
+</a>
+                        </div>
+                </div>
+            </div>
+
                         {!! Form::close() !!}
 
                     </div>

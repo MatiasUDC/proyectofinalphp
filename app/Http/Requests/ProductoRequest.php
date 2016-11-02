@@ -27,7 +27,7 @@ class ProductoRequest extends FormRequest
             'nombre' => 'required|min:3',
             'descripcion' => 'required|min:3',
             'categoria_id' =>  'required',
-            'imagen' => 'required',
+            'imagen' => 'required|image|mimes:jpeg, png, bmp, gif, or svg',
             'stock' => 'required',
             'precio' => 'required'
         ];
