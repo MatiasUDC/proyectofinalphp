@@ -132,6 +132,12 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+
+
+                                    <li><a href="{{ url('/perfil') }}"><span class="glyphicon glyphicon-ok" ></span> Mi perfil</a></li>
+                        
+
+
                                     <li>
                                         <a href="{{ url('/logout') }}"
                                             onclick="event.preventDefault();

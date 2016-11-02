@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categorium extends Model
 {
+
+    //stapler libreria para fotos
+    
+
+
     /**
      * The database table used by the model.
      *

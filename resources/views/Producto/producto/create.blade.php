@@ -48,24 +48,23 @@
     {!! Form::label('categoria', 'Categoria:', ['class' => 'col-md-4 control-label']) !!}
 
           <div class="col-md-6">
+
+
          <select class="form-control" name="categoria_id" >
             <option value=""> Seleccione Categoria: </option>
             @foreach($categoria as $categorias)
-              <option value="{{$categorias->id}}">{{$categorias->nombre}}</option>
+              <option value="{{$categorias->id}}">{{$categorias->nombre}}   </option>
              @endforeach
              </select>
-         </div>
+        @if ($errors->has('categoria_id')? 'has-error':'')
 
-
-          <div class="col-md-6">
-                    @if ($errors->has('categoria_id'))
-              {!! $errors->first('categoria_id', '<p class="help-block">:message</p>') !!}
+              {!! $errors->first('id','categoria_id', '<p class="help-block">:message</p>') !!}
           @endif
-            </div>
-        
+            
+
+
+         </div>
     </div>
-
-
 
 
             @if(!(isset($ver)))

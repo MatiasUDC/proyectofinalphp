@@ -18,7 +18,14 @@ Route::get('/', function () {
 
 Route::get('admin', 'Admin\\AdminController@index');
 
+
+  // Route::get('/', ['uses' => 'AdminController@index']);
+
+
+
+
 Route::get('admin/give-role-permissions', 'Admin\\AdminController@getGiveRolePermissions');
+
 Route::post('admin/give-role-permissions', 'Admin\\AdminController@postGiveRolePermissions');
 Route::resource('admin/roles', 'Admin\\RolesController');
 Route::resource('admin/permissions', 'Admin\\PermissionsController');
@@ -29,17 +36,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+
 Route::resource('producto', 'Producto\\ProductoController');
+Route::resource('categoria', 'Categoria\\CategoriaController');
 
-/*
 // Check role in route middleware
-Route::group(['prefix' => 'admin', 'middleware' => 
-	['auth', 'roles'], 'roles' => 'admin'], function () {
-   Route::get('/', ['uses' => 'AdminController@index']);
-
-   
-});
-*/
 
 
 
@@ -52,4 +53,3 @@ Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'rol
 */
 
 
-Route::resource('categoria', 'Categoria\\CategoriaController');
