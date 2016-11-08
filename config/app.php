@@ -182,7 +182,7 @@ return [
 
        // Appzcoder\LaravelAdmin\LaravelAdminServiceProvider::class,
         // For creacion de formularios & html
-        //Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+       // Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
     ],

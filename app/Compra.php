@@ -4,29 +4,28 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Compra.php extends Model
+class Compra extends Model
 {
-    protected $table = "productos";
-    protected $fillable = 	[
-	    						'id_usuario', 
-								'id_producto',
-								'id_metodo',
-								'monto',
-							];
+    /**
+     * The database table used by the model.
+     *
+     * @var string
+     */
+    protected $table = 'compras';
 
+    /**
+    * The database primary key value.
+    *
+    * @var string
+    */
+    protected $primaryKey = 'id';
 
+    /**
+     * Attributes that should be mass-assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['cant_producto', 'monto_total', 'reservado'];
 
-    public function usuario()
-    {
-    	return $this->belongsTo('App\Usuario');
-    }
-    public function producto()
-    {
-    	return $this->belongsTo('App\Producto');
-    }
-    public function metodo()
-    {
-    	return $this->belongsTo('App\Metodo');
-    }
-
+    
 }

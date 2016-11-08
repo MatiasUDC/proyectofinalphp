@@ -11,7 +11,7 @@ class HomeController extends Controller
     //linea para dar autorizacion
     public function __construct()
     {
-       // $this->middleware('auth');
+        // $this->middleware('auth');
     }
 
 

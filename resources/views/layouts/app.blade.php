@@ -86,6 +86,8 @@
                             <li><a href="{{ url('producto') }}"><span class="glyphicon glyphicon-th-list"></span> Productos</a></li>
 
                             <li><a href="{{ url('categoria') }}"><span class="glyphicon glyphicon-th-list"></span> Categorias</a></li>
+
+                             <li><a href="{{ url('compra') }}"><span class="glyphicon glyphicon-th-list"></span> ABM compra</a></li>
                             
 
 
