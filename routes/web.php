@@ -53,6 +53,6 @@ Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'rol
 */
 
 
-
-
 Route::resource('compra', 'Compra\\CompraController');
+
+Route::resource('comentario', 'Comentario\\ComentarioController');
