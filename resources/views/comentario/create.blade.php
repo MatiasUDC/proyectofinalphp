@@ -43,7 +43,7 @@
 
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-4">
-                                {!! Form::submit('Create', ['class' => 'btn btn-primary']) !!}
+                                {!! Form::submit('Agreagar Comentario', ['class' => 'btn btn-primary']) !!}
                             </div>
                         </div>
                         {!! Form::close() !!}

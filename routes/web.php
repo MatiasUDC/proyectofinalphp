@@ -49,8 +49,9 @@ Route::resource('categoria', 'Categoria\\CategoriaController');
 Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'roles' => 'admin'], function () {
 	Route::get('/', ['uses' => 'Admin\UsersController@index']);
 });
-
 */
+
+
 
 
 Route::resource('compra', 'Compra\\CompraController');
