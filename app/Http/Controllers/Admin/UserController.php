@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-//use App\Http\Requests\SaveUserRequest;
+use App\Http\Requests\GuardarUserRequest;
 use App\Http\Controllers\Controller;
 use App\User;
 
@@ -41,9 +41,29 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GuardarUserRequest $request)
     {
-        //
+        
+         $data = [
+            'nombre'          => $request->get('nombre'),
+            'apellido'     => $request->get('apellido'),
+            'email'         => $request->get('email'),
+            'user'          => $request->get('user'),
+            'password'      => $request->get('password'),
+            'type'          => $request->get('type'),
+            'activo'        => $request->has('activo') ? 1 : 0,
+            'direccion'       => $request->get('direccion'),
+            'telefono'       => $request->get('telefono')
+
+        ];
+
+        $user = User::create($data);
+
+        $message = $user ? 'Usuario agregado correctamente!' : 'El usuario NO pudo agregarse!';
+        
+        return redirect('/user')->with('message', $message);
+
+
     }
 
     /**

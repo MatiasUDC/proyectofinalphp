@@ -13,7 +13,7 @@ class GuardarUserRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,8 +23,13 @@ class GuardarUserRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            //
+         return [
+            'nombre'      => 'required|max:100',
+            'apellido' => 'required|max:100',
+            'email'     => 'required|email|unique:users',
+            'user'      => 'required|unique:users|min:4|max:20',
+            'password'  => 'required|confirmed',
+            'type'      => 'required|in:user,admin'
         ];
     }
 }

@@ -157,9 +157,9 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="active">Active:</label>
+                            <label for="active">Activo:</label>
                             
-                            {!! Form::checkbox('active', null, true) !!}
+                            {!! Form::checkbox('activo', null, true) !!}
                         </div>
                         
                         <div class="form-group">
