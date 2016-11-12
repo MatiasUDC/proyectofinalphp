@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests;
+//use App\Http\Requests\SaveUserRequest;
+use App\Http\Controllers\Controller;
+use App\User;
+
 class UserController extends Controller
 {
     /**
@@ -13,7 +18,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+          $users = User::orderBy('nombre')->paginate(5);
+        //dd($users);
+        return view('admin.user.index', compact('users'));
     }
 
     /**
