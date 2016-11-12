@@ -5,7 +5,7 @@
         <div class="page-header">
             <h1>
                 <i class="fa fa-user"></i> USUARIOS
-                <a href="{{ route('admin.user.create') }}" class="btn btn-warning">
+                <a href="{{ url('admin.user.create') }}" class="btn btn-success">
                     <i class="fa fa-plus-circle"></i> Usuario
                 </a>
             </h1>
@@ -42,23 +42,31 @@
 
 
 
-                                 <td>
-                                    <a href="{{ route('admin.user.edit', $user) }}" class="btn btn-primary">
-                                        <i class="fa fa-pencil-square-o"></i>
+                                      <!-- botn donde se edita-->
+
+                                <td>
+                                    <a href="{{ url('/user/' . $user->id . '/edit') }}" class="btn btn-primary">
+                                        <i class="fa fa-pencil-square"></i>
                                     </a>
                                 </td>
-                                <td>
-                                    
 
-                                    {!! Form::open(['route' => ['admin.user.destroy', $user]]) !!}
 
+
+
+
+                                            {!! Form::open([
+                                                'method'=>'DELETE',
+                                                'url' => ['/user', $user->id],
+                                                'style' => 'display:inline'
+                                            ]) !!}
+                                 <td>    
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
                                             <i class="fa fa-trash-o"></i>
                                         </button>
                                     {!! Form::close() !!}
+
                                 </td>
-                                    
 
 
 
