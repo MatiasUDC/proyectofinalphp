@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-//use App\Http\Requests\SaveProductRequest;
+use App\Http\Requests\GuardarProductRequest;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Categoria;
@@ -44,9 +44,24 @@ class ProductoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GuardarProductRequest $request)
     {
-        //
+        //realizo validaciones tanto por request y en el controlador
+          $data = [
+            'nombre'          => $request->get('nombre'),
+            'descripcion'   => $request->get('descripcion'),
+            'precio'         => $request->get('precio'),
+            'imagen'         => $request->get('imagen'),
+            'stock'         => $request->get('stock'),
+            'activo'       => $request->has('activo') ? 1 : 0,
+            'categoria_id'   => $request->get('categoria_id')
+        ];
+
+        $product = Product::create($data);
+
+        $message = $product ? 'Producto agregado correctamente!' : 'El producto NO pudo agregarse!';
+        
+        return redirect('producto')->with('message', $message);
     }
 
     /**
