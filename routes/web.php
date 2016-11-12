@@ -2,58 +2,20 @@
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Application Routes
 |--------------------------------------------------------------------------
 |
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
+| Here is where you can register all of the routes for an application.
+| It's a breeze. Simply tell Laravel the URIs it should respond to
+| and give it the controller to call when that URI is requested.
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('admin', 'Admin\\AdminController@index');
-
-
-  // Route::get('/', ['uses' => 'AdminController@index']);
+	Route::resource('categoria', 'Admin\CategoriaController');
+	Route::resource('product', 'Admin\ProductoController');
 
 
 
-
-Route::get('admin/give-role-permissions', 'Admin\\AdminController@getGiveRolePermissions');
-
-Route::post('admin/give-role-permissions', 'Admin\\AdminController@postGiveRolePermissions');
-Route::resource('admin/roles', 'Admin\\RolesController');
-Route::resource('admin/permissions', 'Admin\\PermissionsController');
-Route::resource('admin/users', 'Admin\\UsersController');
-Auth::routes();
-
-
-
-Route::get('/home', 'HomeController@index');
-
-
-Route::resource('producto', 'Producto\\ProductoController');
-Route::resource('categoria', 'Categoria\\CategoriaController');
-
-// Check role in route middleware
-
-
-
-/*
-// Check role in route middleware
-Route::group(['prefix' => 'admin/users', 'middleware' => ['auth', 'roles'], 'roles' => 'admin'], function () {
-	Route::get('/', ['uses' => 'Admin\UsersController@index']);
-});
-*/
-
-
-
-
-Route::resource('compra', 'Compra\\CompraController');
-
-Route::resource('comentario', 'Comentario\\ComentarioController');
