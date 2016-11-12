@@ -31,7 +31,11 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        //
+         $categories = Categoria::orderBy('id', 'desc')->pluck('nombre', 'id');
+        //dd($categories);
+        return view('admin.producto.create', compact('categories'));
+
+
     }
 
     /**
