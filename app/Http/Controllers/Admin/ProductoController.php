@@ -83,7 +83,13 @@ class ProductoController extends Controller
      */
     public function edit($id)
     {
-        //
+         $categories = Categoria::orderBy('id', 'desc')->pluck('nombre', 'id');
+
+        $product = Product::findOrFail($id);
+
+
+        return view('admin.producto.edit', compact('categories', 'product'));
+
     }
 
     /**
