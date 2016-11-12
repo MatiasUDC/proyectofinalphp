@@ -5,7 +5,7 @@
         <div class="page-header">
             <h1>
                 <i class="fa fa-user"></i> USUARIOS
-                <a href="{{ url('admin.user.create') }}" class="btn btn-success">
+                <a href="{{ url('/user/create') }}" class="btn btn-success">
                     <i class="fa fa-plus-circle"></i> Usuario
                 </a>
             </h1>
