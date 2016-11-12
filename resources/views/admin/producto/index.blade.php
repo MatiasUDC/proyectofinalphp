@@ -42,30 +42,37 @@
 
                                 <td>{{ $product->descripcion }}</td>
                                 <td>{{ $product->stock }}</td>
-                                
+
                                 <td>${{ number_format($product->precio,2) }}</td>
 
                                 <td>{{ $product->visible == 1 ? "Si" : "No" }}</td>
                             
 
 
+
+                                <!-- botn donde se edita-->
+
                                 <td>
-                                    <a href="{{ url('/product/edit', $product->slug) }}" class="btn btn-primary">
-                                        <i class="fa fa-pencil-square-o"></i>
+                                    <a href="{{ url('/producto/' . $product->id . '/edit') }}" class="btn btn-primary">
+                                        <i class="fa fa-pencil-square"></i>
                                     </a>
                                 </td>
-                                <td>
-                                    
 
 
 
 
+
+                                            {!! Form::open([
+                                                'method'=>'DELETE',
+                                                'url' => ['/producto', $product->id],
+                                                'style' => 'display:inline'
+                                            ]) !!}
+                                 <td>    
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button onClick="return confirm('Eliminar registro?')" class="btn btn-danger">
                                             <i class="fa fa-trash-o"></i>
                                         </button>
                                     {!! Form::close() !!}
-
 
                                 </td>
 
