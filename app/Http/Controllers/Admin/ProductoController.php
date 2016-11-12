@@ -87,6 +87,13 @@ class ProductoController extends Controller
      */
     public function destroy($id)
     {
-        //
+            Product::destroy($id);
+
+        
+        $message = $id ? 'Producto eliminada correctamente!' : 'La Categoría NO pudo eliminarse!';
+
+        return redirect('producto')->with('message', $message);
+
+
     }
 }
