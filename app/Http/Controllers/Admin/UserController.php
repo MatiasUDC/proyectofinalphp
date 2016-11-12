@@ -86,6 +86,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+        User::destroy($id);
+
+        
+        $message = $id ? 'Usuario eliminada correctamente!' : 'El usuario NO pudo eliminarse!';
+
+        return redirect('user')->with('message', $message);
+
     }
 }
