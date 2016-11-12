@@ -99,9 +99,23 @@ class ProductoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(GuardarProductRequest $request, $id)
     {
-        //
+
+
+         $requestData = $request->all();
+        $product = Product::findOrFail($id);
+
+        //$product->activo = $request->has('activo') ? 1 : 0;
+
+        $product->update($requestData);
+
+
+         $message = $requestData ? 'Producto actualizado correctamente!' : 'El Producto NO pudo actualizarse!';
+
+
+        return redirect('producto')->with('message', $message);
+
     }
 
     /**

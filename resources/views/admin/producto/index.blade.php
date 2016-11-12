@@ -45,7 +45,7 @@
 
                                 <td>${{ number_format($product->precio,2) }}</td>
 
-                                <td>{{ $product->visible == 1 ? "Si" : "No" }}</td>
+                                <td>{{ $product->activo == 1 ? "Si" : "No" }}</td>
                             
 
 
