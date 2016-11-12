@@ -7,7 +7,7 @@
 			<h1>
 				<i class="fa fa-shopping-cart"></i>
 				PRODUCTOS 
-				<a href="{{ url('producto/create') }}" class="btn btn-warning">
+				<a href="{{ url('producto/create') }}" class="btn btn-success">
 					<i class="fa fa-plus-circle"></i> Producto
 				</a>
 			</h1>
