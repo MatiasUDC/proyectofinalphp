@@ -22,6 +22,17 @@ class StoreController extends Controller
         return view('store.index', compact('products'));
     }
 
+
+
+    public function show($slug)
+    {
+        $product = Producto::where('slug', $slug)->first();
+        //dd($product);
+
+        return view('store.show', compact('product'));
+    }
+
+
     /**
      * Show the form for creating a new resource.
      *
