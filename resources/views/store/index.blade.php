@@ -8,11 +8,11 @@
 	<div id="products">
 		@foreach($products as $product)
 			<div class="product white-panel">
-				<h3>{{ $product->name }}</h3><hr>
-				<img src="{{ $product->image }}" width="200">
+				<h3>{{ $product->nombre }}</h3><hr>
+				<img src="{{ $product->imagen }}" width="200">
 				<div class="product-info panel">
-					<p>{{ $product->extract }}</p>
-					<h3><span class="label label-success">Precio: ${{ number_format($product->price,2) }}</span></h3>
+					<p>{{ $product->descripcion }}</p>
+					<h3><span class="label label-success">Precio: ${{ number_format($product->precio,2) }}</span></h3>
 					<p>
 						<a class="btn btn-warning" href="{{ url('cart-add', $product->slug) }}">
 							<i class="fa fa-cart-plus"></i> La quiero
