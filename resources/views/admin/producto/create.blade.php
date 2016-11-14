@@ -100,7 +100,7 @@
                                     null, 
                                     array(
                                         'class'=>'form-control',
-                                        'placeholder' => 'Ingresa la url de la imagen...',
+                                        'placeholder' => 'Agregar link',
                                     )
                                 ) 
                             !!}

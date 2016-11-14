@@ -20,8 +20,6 @@
                     @endif
                     
 
-
-
                       {!! Form::open(['url' => '/user', 'class' => 'form-horizontal', 'files' => true]) !!}
 
 
