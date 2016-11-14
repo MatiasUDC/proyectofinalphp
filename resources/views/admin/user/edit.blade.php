@@ -122,7 +122,7 @@
 
                         <div class="form-group">
 
-                            <label for="address">Dirección:</label>
+                            <label for="address">Telefono:</label>
                             
                             {!! 
                                 Form::text(
@@ -137,9 +137,9 @@
 
                         
                         <div class="form-group">
-                            <label for="active">Activo:</label>
+                            <label for="activo">Activo:</label>
                             
-                            {!! Form::checkbox('activo', null, $user->activo == 1 ? true : false) !!}
+                         <!--   {!! Form::checkbox('activo', null, $user->activo == 1 ? true : false) !!} -->
                         </div><hr>
                         
                         <fieldset>

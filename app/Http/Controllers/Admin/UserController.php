@@ -112,6 +112,7 @@ class UserController extends Controller
             'type'      => 'required|in:user,admin',
         ]);
         
+        /*
         $user->nombre = $request->get('nombre');
         $user->apellido = $request->get('apellido');
         $user->email = $request->get('email');
@@ -120,28 +121,24 @@ class UserController extends Controller
         $user->direccion = $request->get('direccion');
         $user->activo = $request->has('activo') ? 1 : 0;
         if($request->get('password') != "") $user->password = $request->get('password');
-        
+        */
        // $updated = $user->save();
         
-       
+
         
         //return redirect()->route('admin.user.index')->with('message', $message);
 
 
 
-
-
-
-
         $requestData = $request->all();
         $user = User::findOrFail($id);
+//        $user->activo = $request->has('activo') ? 1 : 0;
 
-        //$product->activo = $request->has('activo') ? 1 : 0;
+
 
         $user->update($requestData);
 
-
-         $message = $updated ? 'Usuario actualizado correctamente!' : 'El Usuario NO pudo actualizarse!';
+         $message = $requestData ? 'Usuario actualizado correctamente!' : 'El Usuario NO pudo actualizarse!';
 
 
         return redirect('/user')->with('message', $message);
