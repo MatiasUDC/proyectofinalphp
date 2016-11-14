@@ -41,11 +41,11 @@
 					</span>
 				</h3><hr>
 				<p>
-					<a href="{{ route('cart-show') }}" class="btn btn-primary">
+					<a href="{{ url('cart-show') }}" class="btn btn-primary">
 						<i class="fa fa-chevron-circle-left"></i> Regresar
 					</a>
 
-					<a href="{{ route('payment') }}" class="btn btn-warning">
+					<a href="{{ url('payment') }}" class="btn btn-warning">
 						Pagar con <i class="fa fa-cc-paypal fa-2x"></i>
 					</a>
 				</p>

@@ -10,7 +10,7 @@
 			@if(count($cart))
 
 			<p>
-				<a href="{{ route('cart-trash') }}" class="btn btn-danger">
+				<a href="{{ url('cart-trash') }}" class="btn btn-danger">
 					Vaciar carrito <i class="fa fa-trash"></i>
 				</a>
 			</p>
@@ -30,7 +30,7 @@
 					<tbody>
 						@foreach($cart as $item)
 							<tr> 
-								<td><img src="{{ $item->image }}"></td>
+								<td><img src="{{ $item->imagen }}"></td>
 								<td>{{ $item->name }}</td>
 								<td>${{ number_format($item->price,2) }}</td>
 								<td>
