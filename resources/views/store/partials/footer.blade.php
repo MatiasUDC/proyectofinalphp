@@ -1,16 +1,26 @@
 <footer class="container-fluid">
+
 	<div class="row">
 		<div class="col-md-4">
-			<h3>My Laravel Store</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque dolores ratione minus, voluptates dolore soluta harum. Nobis neque doloribus corrupti iusto rem beatae libero, incidunt animi nemo voluptatem dolores accusantium magni ad ipsum eum repellendus vero deleniti velit molestiae quaerat, veniam ducimus labore sapiente? Commodi ad, pariatur. Ab consectetur, quasi!</p>
+			<h3>Ventas de Ropa y en General</h3>
+			<p>
+				Se Vende de todo tipo de Ventas en Online
+
+			</p>
 		</div>
+
 		<div class="col-md-4">
 			<h3>Desarrollado por:</h3>
 			<div class="author-info">
 				<img src="https://pbs.twimg.com/profile_images/592393458469380096/T4twnQ3Q.png" alt="" class="avatar">
-				<p><a href="#">@ovedfs</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum excepturi possimus tempora porro, a est atque? Rem eaque, ullam, dolore fugit cupiditate odio ipsum fugiat quae, error accusantium corporis harum voluptatem perspiciatis dolorem pariatur iste id temporibus voluptatum enim dicta.</p>
+				<p><a href="#">@</a> Integrantes de la Universidad del Chubut: 
+
+
+				</p>
 			</div>
 		</div>
+
+		
 		<div class="col-md-4">
 			<h3>Siguenos</h3>
 			<ul class="redes">

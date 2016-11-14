@@ -9,16 +9,16 @@
 	<div class="row">
 		<div class="col-md-6">
 			<div class="product-block">
-				<img src="{{ $product->image }}">
+				<img src="{{ $product->imagen }}">
 			</div>	
 		</div>
 		<div class="col-md-6">
 			<div class="product-block">
-				<h3>{{ $product->name }}</h3><hr>
+				<h3>{{ $product->nombre }}</h3><hr>
 				<div class="product-info panel">
-					<p>{{ $product->description }}</p>
+					<p>{{ $product->descripcion }}</p>
 					<h3>
-						<span class="label label-success">Precio: ${{ number_format($product->price,2) }}</span>
+						<span class="label label-success">Precio: ${{ number_format($product->precio,2) }}</span>
 					</h3>
 					<p>
 						<a class="btn btn-warning btn-block" href="{{ route('cart-add', $product->slug) }}">
@@ -31,7 +31,7 @@
 	</div><hr>
 
 	<p>
-		<a class="btn btn-primary" href="{{ route('home') }}">
+		<a class="btn btn-primary" href="{{ url('home') }}">
 			<i class="fa fa-chevron-circle-left"></i> Regresar
 		</a>
 	</p>

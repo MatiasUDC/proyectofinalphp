@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 //use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Producto;
+use App\Product;
 
 class StoreController extends Controller
 {
@@ -17,7 +17,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $products = Producto::all();
+        $products = Product::all();
         //dd($products);
         return view('store.index', compact('products'));
     }
@@ -26,7 +26,7 @@ class StoreController extends Controller
 
     public function show($slug)
     {
-        $product = Producto::where('slug', $slug)->first();
+        $product = Product::where('slug', $slug)->first();
         //dd($product);
 
         return view('store.show', compact('product'));
@@ -60,11 +60,12 @@ class StoreController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+  
+  /*  public function show($id)
     {
         //
     }
-
+    */
     /**
      * Show the form for editing the specified resource.
      *

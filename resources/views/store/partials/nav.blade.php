@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand main-title" href="{{ url('home') }}">FiSO</a>
+      <a class="navbar-brand main-title" href="{{ url('home') }}">Tienda Online</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
