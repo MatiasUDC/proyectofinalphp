@@ -7,49 +7,44 @@
             <h1><i class="fa fa-rocket"></i> MI TIENDA ONLINE - PANEL DE CONTROL</h1>
         </div>
         
-        <h2>Bienvenido(a) <!-- {{ Auth::user()->user }} --> al Panel de administración de tu tienda en Online.</h2><hr>
+
+
+        <h2>Bienvenido(a) <!--  Auth::user()->user  --> al Panel de administración de tu tienda en Online.</h2><hr>
         
+        
+
+
+
         <div class="row">
             
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-list-alt icon-home"></i>
-                    <a href="{{ route('admin.category.index') }}" class="btn btn-warning btn-block btn-home-admin">CATEGORÍAS</a>
+                    <a href="{{ url('/categoria') }}" class="btn btn-warning btn-block btn-home-admin">CATEGORÍAS</a>
                 </div>
             </div>
-            
+             
+             
             <div class="col-md-6">
                 <div class="panel">
                     <i class="fa fa-shopping-cart  icon-home"></i>
-                    <a href="{{ route('admin.product.index') }}" class="btn btn-warning btn-block btn-home-admin">PRODUCTOS</a>
+                    <a href="{{ url('/producto') }}" class="btn btn-warning btn-block btn-home-admin">PRODUCTOS</a>
                 </div>
             </div>
                     
         </div>
         
-        <!--
-        <div class="row">
-            
-            <div class="col-md-6">
-                <div class="panel">
-                    <i class="fa fa-cc-paypal  icon-home"></i>
-                    <a href="{{ route('admin.order.index') }}" class="btn btn-warning btn-block btn-home-admin">PEDIDOS</a>
-                </div>
-            </div> 
-
-            
-            
-            <div class="col-md-6">
-                <div class="panel">
-                    <i class="fa fa-users  icon-home"></i>
-                    <a href="{{ url('admin.user.index') }}" class="btn btn-warning btn-block btn-home-admin">USUARIOS</a>
-                </div>
-            </div>
-
-
-            -->
-                    
+      
+      
+                                
         </div>
+
+
+
+
+
+
+
         
     </div>
     <hr>

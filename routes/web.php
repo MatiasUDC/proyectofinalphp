@@ -18,4 +18,7 @@ Route::get('/', function () {
 	Route::resource('producto', 'Admin\ProductoController');
 	Route::resource('user', 'Admin\UserController');
 
+	Route::get('home', function(){
+		return view('admin.home');
+	});
 
