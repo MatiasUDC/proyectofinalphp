@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class RedirectIfAuthenticated
+class Authenticate
 {
     /**
      * The Guard implementation.
@@ -34,8 +34,19 @@ class RedirectIfAuthenticated
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->check()) {
-            return redirect('/home');
+        if ($this->auth->guest()) {
+            if ($request->ajax()) {
+                return response('Unauthorized.', 401);
+            } else {
+                return redirect()->guest('auth/login');
+            }
+        }
+
+        if($request->path() == 'order-detail') return $next($request);
+        
+        if(auth()->user()->type != 'admin'){
+            $message = 'Permiso denegado: Solo los administradores pueden entrar a esta sección';
+            return redirect()->route('home')->with('message', $message);
         }
 
         return $next($request);

@@ -5,34 +5,38 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Foundation\Auth\RegistersUsers;
 
-class AuthController extends Controller
+class RegisterController extends Controller
 {
     /*
     |--------------------------------------------------------------------------
-    | Registration & Login Controller
+    | Register Controller
     |--------------------------------------------------------------------------
     |
-    | This controller handles the registration of new users, as well as the
-    | authentication of existing users. By default, this controller uses
-    | a simple trait to add these behaviors. Why don't you explore it?
+    | This controller handles the registration of new users as well as their
+    | validation and creation. By default this controller uses a trait to
+    | provide this functionality without requiring any additional code.
     |
     */
 
-    //use AuthenticatesAndRegistersUsers;
-
-    protected $redirectPath = '/';
-    //protected $redirectAfterLogout = "/auth/login";
+    use RegistersUsers;
 
     /**
-     * Create a new authentication controller instance.
+     * Where to redirect users after login / registration.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/home';
+
+    /**
+     * Create a new controller instance.
      *
      * @return void
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('guest');
     }
 
     /**
@@ -44,13 +48,13 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'nombre' => 'required|max:255',
-            'apellido' => 'max:255',
+            //'nombre' => 'required|max:255',
+           // 'apellido' => 'max:255',
             'email' => 'required|email|max:255|unique:users',
             'user' => 'required|max:255|unique:users',
             'password' => 'required|confirmed|min:6',
-            'direccion' => 'required',
-            'telefono' => 'required',
+           // 'direccion' => 'required',
+           // 'telefono' => 'required',
 
         ]);
     }
@@ -64,15 +68,16 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'nombre' => $data['nombre'],
-            'apellido' => $data['apellido'],
+            'nombre' => "null",
+            'apellido' =>"null",
             'email' => $data['email'],
             'user' => $data['user'],
             'type' => "user",
             'activo' => 1,
             'password' => bcrypt($data['password']),
-            'direccion' => $data['direccion'],
-            'telefono' => $data['telefono'],
+             'direccion' => "null",
+             'telefono' => "null",
         ]);
     }
+
 }

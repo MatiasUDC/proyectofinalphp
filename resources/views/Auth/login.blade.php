@@ -12,8 +12,12 @@
 
 					 @include('store.partials.errors') 
 
-					<form method="POST" action="/auth/login">
+				<!--	<form method="POST" action="/auth/login"> -->
+					    
+						  <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+
 					    {!! csrf_field() !!}
+
 
 					    <div class="form-group">
 					        <label for="email">Email</label>
