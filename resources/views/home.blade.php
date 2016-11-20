@@ -7,6 +7,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Panel de Uusuario</div>
 
+                <!-- actualizaciones-->
                 <div class="panel-body">
 estas conectado como usuario                </div>
             </div>
