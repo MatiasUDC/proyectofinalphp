@@ -12,7 +12,10 @@
 		<div class="col-md-4">
 			<h3>Desarrollado por:</h3>
 			<div class="author-info">
-				<img src="https://pbs.twimg.com/profile_images/592393458469380096/T4twnQ3Q.png" alt="" class="avatar">
+				
+				<!-- <img src="https://pbs.twimg.com/profile_images/592393458469380096/T4twnQ3Q.png" alt="" class="avatar"> -->
+
+
 				<p><a href="#">@</a> Integrantes de la Universidad del Chubut: 
 
 
