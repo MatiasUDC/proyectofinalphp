@@ -15,7 +15,15 @@ Route::get('/', function () {
 });
 
 
+
+
+
+
+
+
 Auth::routes();
+
+
 
 
 
