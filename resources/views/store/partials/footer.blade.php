@@ -8,9 +8,9 @@
 			<h3><a> Desarrollado por los integrantes: </a></h3>
 			<div class="author-info">
 				
-				<p><a href="#">Curiqueo Cesar</a></p>
-				<p> <a href="#">Bruzzo Matias</a></p>
-				<p><a href="#">Vilca Moises</a></p>
+				<li> <a href="#">Curiqueo Cesar</a></li>
+				<li>  <a href="#">Bruzzo Matias</a></li>
+				<li> <a href="#">Vilca Moises</a></li>
 			</div>
 		</div>
 		<div class="col-md-4">
