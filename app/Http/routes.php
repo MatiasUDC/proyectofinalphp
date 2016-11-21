@@ -48,6 +48,10 @@ Route::get('cart/add/{product}', [
 	'uses' => 'CartController@add'
 ]);
 
+//se añade parte comentario
+
+
+
 Route::get('cart/delete/{product}',[
 	'as' => 'cart-delete',
 	'uses' => 'CartController@delete'
