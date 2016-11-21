@@ -25,6 +25,15 @@
 							La quiero <i class="fa fa-cart-plus fa-2x"></i>
 						</a>
 					</p>
+
+					<p>
+						<a class="btn btn-primary btn-block" 
+						href="{{ route('cart-add', $product->coments) }}">
+							Comentarios <i class="fa "></i>
+						</a>
+					</p>
+
+
 				</div>
 			</div>	
 		</div>
