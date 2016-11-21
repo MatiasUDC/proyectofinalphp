@@ -28,7 +28,7 @@
 
 					<p>
 						<a class="btn btn-primary btn-block" 
-						href="{{ route('comments', $product->coments) }}">
+						href="{{ route('cart-add', $product->coments) }}">
 							Comentarios <i class="fa "></i>
 						</a>
 					</p>
