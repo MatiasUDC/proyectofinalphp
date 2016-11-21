@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Requests\SaveUserRequest;
 use App\Http\Controllers\Controller;
@@ -111,7 +110,6 @@ class UserController extends Controller
         $updated = $user->save();
         
         $message = $updated ? 'Usuario actualizado correctamente!' : 'El Usuario NO pudo actualizarse!';
-        
         return redirect()->route('admin.user.index')->with('message', $message);
     }
 

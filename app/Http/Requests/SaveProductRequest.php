@@ -26,7 +26,7 @@ class SaveProductRequest extends Request
         return [
             'name'          => 'required',
             'description'   => 'required',
-            'extract'       => 'required',
+            'extract'       => 'required', //descripcon minima
             'price'         => 'required',
             'image'         => 'required',
             'category_id'   => 'required'
