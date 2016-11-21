@@ -1,20 +1,20 @@
 <footer class="container-fluid">
 	<div class="row">
 		<div class="col-md-4">
-			<h3>Ventas Online </h3>
-			<p> Se realiza ventas de todo tipo</p>
+			<h3><a>Ventas Online</a> </h3>
+			<p> <a>Se realiza ventas de todo tipo, indumentaria, marroqueneria, artefactos electronicos, celulares, relojes, etc </a></p>
 		</div>
 		<div class="col-md-4">
-			<h3>Desarrollado por los integrantes:</h3>
+			<h3><a> Desarrollado por los integrantes: </a></h3>
 			<div class="author-info">
-				<img src="https://pbs.twimg.com/profile_images/592393458469380096/T4twnQ3Q.png" alt="" class="avatar">
+				
 				<p><a href="#">Curiqueo Cesar</a></p>
 				<p> <a href="#">Bruzzo Matias</a></p>
 				<p><a href="#">Vilca Moises</a></p>
 			</div>
 		</div>
 		<div class="col-md-4">
-			<h3>Siguenos</h3>
+			<h3><a> Siguenos</a></h3>
 			<ul class="redes">
 				<li>
 					<a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
@@ -32,7 +32,7 @@
 					<a href="#"><i class="fa fa-youtube-square fa-2x"></i></a>
 				</li>
 			</ul>
-			<h3>Escribenos:</h3>
+			<h3> <a> Escribenos:</a></h3>
 			<i class="fa fa-at"></i> <a href="#">info@udc.edu.ar</a>
 		</div>
 	</div>
