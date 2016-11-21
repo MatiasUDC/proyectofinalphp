@@ -14,6 +14,7 @@
 
 				<!--	<form method="POST" action="/auth/login"> -->
 					    
+					    
 						  <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
 
 					    {!! csrf_field() !!}
