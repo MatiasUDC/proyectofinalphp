@@ -9,7 +9,7 @@
 		@foreach($products as $product)
 			<div class="product white-panel">
 				<h3>{{ $product->name }}</h3><hr>
-				<img src="{{ $product->image }}" width="200"> 
+				<img src="{{ $product->image }}"  width="200"> 
 				<div class="product-info panel">
 					<p>{{ $product->extract }}</p>
 					<h3><span class="label label-success">Precio: ${{ number_format($product->price,2) }}</span></h3>

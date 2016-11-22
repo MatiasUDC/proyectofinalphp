@@ -11,13 +11,13 @@ class Product extends Model
 	protected $fillable = ['name', 'slug', 'description', 'extract', 'image', 'visible', 'price', 'category_id'];
 
     
-    // Relation with Category
+    // Relation con la categoria
     public function category()
     {
         return $this->belongsTo('App\Category');
     }
 
-    // Relation with OrderItem
+    // Relation con la  Comrapra - OrderItem
     public function order_item()
     {
         return $this->hasOne('App\OrderItem');
